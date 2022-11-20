@@ -1,4 +1,4 @@
-# Eye-for-Blind:
+# Eye-for-Blind
 1. Created a process that explains the content of an image in the form of speech through caption generation.
 
 2. Train the InceptionV3 (CNN-encoder) and RNN-decoder on data-set of over 32,000 images for extracting features from
