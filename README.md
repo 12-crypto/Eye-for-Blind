@@ -44,7 +44,7 @@ The model takes as input an image vector from the training set and a partial cap
 ![image](https://user-images.githubusercontent.com/65901214/193335161-49803393-ad2a-47e5-a89f-6ceac0a9d2e9.png)
 The architecture is as shown:  
 ![image](https://user-images.githubusercontent.com/31109495/76164447-fef82f80-6174-11ea-9fc3-cf3a2fed19a9.png)
-Loss function: Categorical Cross Entropy  
+Loss function: Sparse Categorical Cross Entropy  
 Optimizer: Adam 
   
 #### 4. Make predictions:  
