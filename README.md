@@ -14,6 +14,7 @@ The dataset used is Flicker8k (https://www.kaggle.com/ming666/flicker8k-dataset)
 
 ## Results  
 | ![image](https://github.com/JiteshGupta17/Image-Captioning/blob/master/Screenshots/76382310-4998c800-637e-11ea-9e42-04891a26f5b8.png) | 
+|:--:| 
 | *two dogs are playing with each other in the snow .* |
 | ![image](https://github.com/JiteshGupta17/Image-Captioning/blob/master/Screenshots/76382497-f3785480-637e-11ea-986c-1af99a1262c7.png) | 
 | *a little boy is sitting on a slide in the playground .* |
