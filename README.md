@@ -1,5 +1,5 @@
 # Eye-for-Blind
-# Image-Captioning
+
 Automated <b> <i> image to text-speech </i ></b> generator.
 
 A model for generating textual description of a given image based on the objects and actions in the image
@@ -19,24 +19,18 @@ The image captioning task is divided into following parts:
 
 ### Preparing Data
 Data preparation involves mapping captions to their respective image's id.  
-Module: Prepare Data.ipynb  
-Output: captions.txt
 
 
 ### Preprocessing Data
-The captions are augmented with \<start\> token in the beginning and \<end\> token at the end and the images are passed through an InceptionV3 model to generate an encoding for each image.  
-Module: Preprocess Data.ipynb  
-Output: train_captions.txt, test_captions.txt, train_images.pkl, test_images.pkl  
+The captions are augmented with \<start\> token in the beginning and \<end\> token at the end and the images are passed through an InceptionV3 model to generate an encoding for each image.   
 
 
 ### Building Vocabulary
 A vocabulary is prepared from the augmented captions (the one including \<start\> and \<end\>). A word in the captions with a frequency of more than 10 is added to the vocabulary.  
-Module: Build Vocab.ipynb  
-Output: vocabulary.txt  
   
   
 ### Image Captioning
-Module: Image Captioning.ipynb  
+Module: Eye for Blind.ipynb  
 The image captioning module uses the outputs of the other modules to learn to generate captions for an input image. This step performs the following tasks:  
 
 #### 1. Create mapping:
@@ -46,7 +40,8 @@ The words in the vocabulary are mapped to an integer value (or index) and two ma
 Word embeddings are created using pre-trained GloVe word representations. An embedding matrix is created wherein at each word-index (obtained from word_to_index mapping) the embeddings of the word are stored.  
 
 #### 3. Build model:
-The model takes as input an image vector from the training set (train_images.pkl) and a partial caption. The partial caption is initialised as \<start\> and is built successively by a feed forward neural network. The model predicts the next word in the sequence of words forming the partial caption which is, thereafter, added to the partial caption to generate a new partial caption. The process is repeated until \<end\> is generated as the predicted word.  
+The model takes as input an image vector from the training set and a partial caption. The partial caption is initialised as \<start\> and is built successively by a feed forward neural network. The model predicts the next word in the sequence of words forming the partial caption which is, thereafter, added to the partial caption to generate a new partial caption. The process is repeated until \<end\> is generated as the predicted word.  
+![image](https://user-images.githubusercontent.com/65901214/193335161-49803393-ad2a-47e5-a89f-6ceac0a9d2e9.png)
 The architecture is as shown:  
 ![image](https://user-images.githubusercontent.com/31109495/76164447-fef82f80-6174-11ea-9fc3-cf3a2fed19a9.png)
 Loss function: Categorical Cross Entropy  
@@ -83,15 +78,7 @@ Beam search with a beam width of 3 is used to predict next word in the caption.
 <li> Beam search is used instead of greedy search to generate better captions. </li>
 </ul>
 
-## Deployment
-<ul>
-  <li> Used Flask framework and ginger templates for the deployment purpose. Flask is a web framework. It provides us with tools, libraries and technologies that allow us to build a web application </li>
-  
-<li> Also added an additional feature of text to speech conversion of the generated caption. </li>
-</ul>
 
-| ![image](https://github.com/JiteshGupta17/Image-Captioning/blob/master/Screenshots/Deployed.JPG) | 
-|:--:| 
 
 ## References
 <ul>
@@ -99,16 +86,3 @@ Beam search with a beam width of 3 is used to predict next word in the caption.
   <li> https://www.youtube.com/watch?v=RLWuzLLSIgw </li>
 </ul>
 
-
-1. Created a process that explains the content of an image in the form of speech through caption generation.
-
-2. Train the InceptionV3 (CNN-encoder) and RNN-decoder on data-set of over 32,000 images for extracting features from
-the image and generating texts.
-
-3. These texts are positioned according to their priority with help of attention based mechanism to form a
-sentence.
-
-4. gTTS library was used for conversion of caption to speech.
-
-# Result
-![image](https://user-images.githubusercontent.com/65901214/193335161-49803393-ad2a-47e5-a89f-6ceac0a9d2e9.png)
