@@ -8,12 +8,12 @@ A model for generating textual description of a given image based on the objects
 ## Dataset
 The dataset used is Flicker8k (https://www.kaggle.com/ming666/flicker8k-dataset).
 
+## Image Captioning
 ![image](https://user-images.githubusercontent.com/65901214/193335161-49803393-ad2a-47e5-a89f-6ceac0a9d2e9.png)
 
 
 ## Results  
 | ![image](https://github.com/JiteshGupta17/Image-Captioning/blob/master/Screenshots/76382310-4998c800-637e-11ea-9e42-04891a26f5b8.png) | 
-|:--:| 
 | *two dogs are playing with each other in the snow .* |
 | ![image](https://github.com/JiteshGupta17/Image-Captioning/blob/master/Screenshots/76382497-f3785480-637e-11ea-986c-1af99a1262c7.png) | 
 | *a little boy is sitting on a slide in the playground .* |
