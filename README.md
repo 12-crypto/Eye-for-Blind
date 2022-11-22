@@ -78,6 +78,7 @@ Beam search with a beam width of 3 is used to predict next word in the caption.
 <li> Beam search is used instead of greedy search to generate better captions. </li>
 </ul>
 
+![image](https://user-images.githubusercontent.com/65901214/203356442-62d7160e-24f9-4ac7-b521-aca13adef4d7.png)
 
 
 ## References
